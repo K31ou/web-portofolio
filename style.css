@@ -1,0 +1,344 @@
+/* ==================================== */
+/* 0. RESET & VARIABEL CSS */
+/* ==================================== */
+:root {
+    /* Palet Warna Minimalis */
+    --color-text: #171717; /* Hitam gelap */
+    --color-background: #ffffff; /* Putih bersih */
+    --color-primary: #007bff; /* Biru sebagai aksen modern */
+    --color-secondary: #f0f0f0; /* Abu-abu terang untuk latar belakang subtle */
+    --color-link: #007bff; 
+
+    /* Typography */
+    --font-family-sans: 'Inter', sans-serif;
+    --font-size-base: 1.125rem; /* 18px */
+
+    /* Spacing */
+    --spacing-xxl: 6rem;
+    --spacing-xl: 4rem;
+    --spacing-l: 2rem;
+    --spacing-m: 1rem;
+    --border-radius: 4px;
+}
+
+/* Reset Sederhana */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Container untuk membatasi lebar konten */
+.container {
+    max-width: 1200px;
+    padding: 0 var(--spacing-l);
+    margin: 0 auto;
+}
+
+/* Padding untuk setiap section utama */
+.section-padding {
+    padding: var(--spacing-xl) 0;
+}
+
+/* ==================================== */
+/* 1. TYPOGRAPHY */
+/* ==================================== */
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: var(--spacing-m);
+    font-weight: 700;
+}
+
+h1 { font-size: 3rem; } /* Hero Title */
+h2 { font-size: 2.25rem; } /* Section Title */
+h3 { font-size: 1.5rem; } /* Card Title */
+
+.section-title {
+    margin-bottom: var(--spacing-l);
+    text-align: center;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+/* ==================================== */
+/* 2. HEADER & NAVIGATION */
+/* ==================================== */
+.header {
+    background-color: var(--color-text);
+    border-bottom: 1px solid var(--color-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: var(--spacing-m) 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-background);
+}
+
+.nav a {
+    margin-left: var(--spacing-l);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-background);
+}
+
+/* ==================================== */
+/* 3. BUTTONS & CTA */
+/* ==================================== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+    margin-right: var(--spacing-m);
+    border: 2px solid transparent;
+}
+
+.btn.primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #0056b3; /* Warna biru lebih gelap */
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+}
+
+.btn.secondary:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* ==================================== */
+/* 4. HERO SECTION */
+/* ==================================== */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.hero-title {
+    font-weight: 900;
+    margin-bottom: var(--spacing-m);
+    max-width: 800px; /* Batasi lebar judul untuk keterbacaan */
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-l);
+    max-width: 700px;
+}
+
+/* ==================================== */
+/* 5. ABOUT SECTION */
+/* ==================================== */
+.about {
+    background-color: var(--color-secondary);
+}
+
+.bio-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-m);
+    gap: var(--spacing-l);
+    font-weight: 500;
+}
+
+/* ==================================== */
+/* 6. WORK/PROJECTS SECTION */
+/* ==================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-l);
+}
+
+.project-card {
+    background-color: var(--color-background);
+    padding: var(--spacing-l);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-card {
+    padding: var(--spacing-l);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-tag {
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-m);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: var(--spacing-m);
+    font-weight: 600;
+}
+
+
+/* ==================================== */
+/* 7. FOOTER & CONTACT */
+/* ==================================== */
+.footer {
+    background-color: var(--color-text);
+    color: white;
+    padding: var(--spacing-xxl) 0 var(--spacing-l) 0;
+    text-align: center;
+}
+
+.footer .section-title {
+    color: white;
+}
+
+.footer p {
+    margin-bottom: var(--spacing-l);
+    opacity: 0.8;
+}
+
+.contact-links {
+    margin-bottom: var(--spacing-xxl);
+}
+
+.contact-links .btn.primary {
+    background-color: white;
+    color: var(--color-text);
+    margin-right: var(--spacing-l);
+}
+
+.contact-links .btn.primary:hover {
+    background-color: var(--color-secondary);
+}
+
+.link-social {
+    color: white;
+    opacity: 0.7;
+    margin: 0 var(--spacing-m);
+    transition: opacity 0.2s;
+}
+
+.link-social:hover {
+    opacity: 1;
+    color: var(--color-primary);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+/* ==================================== */
+/* 8. MEDIA QUERIES (Responsif) */
+/* ==================================== */
+@media (max-width: 768px) {
+    :root {
+        --font-size-base: 1rem;
+    }
+    
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    
+    .header .container {
+        flex-direction: column;
+    }
+    
+    .nav {
+        margin-top: var(--spacing-m);
+    }
+    
+    .nav a {
+        margin: 0 var(--spacing-m);
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        display: block;
+        margin: var(--spacing-m) 0;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-links a {
+        margin: 0.5rem 0;
+    }
+}
