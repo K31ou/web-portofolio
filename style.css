@@ -41,6 +41,27 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* opening */
+.opening {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 30px;
+    text-align: left;
+    max-width: 900px;
+    margin: 20px auto;
+}
+.opening img {
+    width: 180px;          /* Sesuaikan ukuran */
+    height: 180px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 3px solid black;
+}
+.opening-text {
+    flex: 1;               /* Agar teks mengambil sisa ruang */
+}
+
 /* Container untuk membatasi lebar konten */
 .container {
     max-width: 1200px;
@@ -169,7 +190,6 @@ a:hover {
     margin-bottom: var(--spacing-l);
     max-width: 700px;
 }
-
 /* ==================================== */
 /* 5. ABOUT SECTION */
 /* ==================================== */
